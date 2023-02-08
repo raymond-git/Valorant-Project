@@ -1,4 +1,5 @@
 import './App.css';
+import "./index.css";
 import Homepage from "./webpages/Home"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
