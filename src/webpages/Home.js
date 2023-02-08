@@ -25,7 +25,7 @@ function Home() {
                             <h3 className="mt-8">{agent.displayName}</h3>
                         </Carousel.Caption>
                         <img
-                            className="mx-auto my-10 w-50 block"
+                            className="mx-auto my-8 w-50 block"
                             src={agent.fullPortraitV2}
                             alt={agent.displayName}
                         />
