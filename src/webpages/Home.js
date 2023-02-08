@@ -1,11 +1,25 @@
-import React, { useState } from "react";
-function Home() {
+import React, { useEffect, useState } from "react";
 
-    const [agent, setAgent] = useState([]);
+function Home() {
+    const [agents, setAgents] = useState([]);
+
+    useEffect(() => {
+        fetch("https://valorant-api.com/v1/agents")
+            .then((response) => response.json())
+            .then((getValorantAgent) => {
+                setAgents(getValorantAgent.data);
+            });
+    }, []);
 
     return (
         <div>
-            <h1>Hello world</h1>
+            {/* Need unique id so it knows which agent it belongs to the name and images to each other */}
+            {agents.map((agent) => (
+                <div key={agent.uuid}>
+                    <img src={agent.fullPortraitV2} alt={agent.displayName} />
+                    <p>{agent.displayName}</p>
+                </div>
+            ))}
         </div>
     );
 }
