@@ -11,24 +11,28 @@ function Home() {
         fetch("https://valorant-api.com/v1/agents")
             .then((response) => response.json())
             .then((getValorantAgent) => {
+                console.log(getValorantAgent)
                 setAgents(getValorantAgent.data);
             });
     }, []);
 
     return (
-        <div className="bg-gray-500">
+        
+        <div>
             {/* Need unique id so it knows which agent it belongs to the name and images to each other */}
             <Carousel>
-                {agents.map(agent => (
+                {agents.map((agent) => (
                     <Carousel.Item key={agent.uuid}>
-                        <Carousel.Caption className="h-100">
-                            <h3 className="mt-8">{agent.displayName}</h3>
-                        </Carousel.Caption>
-                        <img
-                            className="mx-auto my-8 w-50 block"
-                            src={agent.fullPortraitV2}
-                            alt={agent.displayName}
-                        />
+                        <Link to={`/${agent.uuid}`}>
+                            <Carousel.Caption className="h-100">
+                                <h3 className="mt-8 font-weight: 800 text-5xl">{agent.displayName}</h3>
+                            </Carousel.Caption>
+                            <img
+                                className="mx-auto my-8 w-50 block"
+                                src={agent.fullPortraitV2}
+                                alt={agent.displayName}
+                            />
+                        </Link>
                     </Carousel.Item>
                 ))}
             </Carousel>
