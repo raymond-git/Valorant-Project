@@ -17,7 +17,7 @@ function Home() {
     }, []);
 
     return (
-        
+
         <div>
             {/* Need unique id so it knows which agent it belongs to the name and images to each other */}
             <Carousel>
@@ -25,10 +25,10 @@ function Home() {
                     <Carousel.Item key={agent.uuid}>
                         <Link to={`/${agent.uuid}`}>
                             <Carousel.Caption className="h-100">
-                                <h3 className="mt-8 font-weight: 800 text-5xl">{agent.displayName}</h3>
+                                <h3 className="mt-8 font-weight: 800 text-5xl text-animation">{agent.displayName}</h3>
                             </Carousel.Caption>
                             <img
-                                className="mx-auto my-8 w-50 block"
+                                className="mx-auto my-8 w-50 block character-animation"
                                 src={agent.fullPortraitV2}
                                 alt={agent.displayName}
                             />

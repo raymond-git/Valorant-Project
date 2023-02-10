@@ -18,8 +18,11 @@ function SelectedAgent() {
         <div>
             {agents.map((agent) => (
                 <div key={agent.uuid}>
-                    <img src={agent.fullPortraitV2}></img>
-                    <p>{agent.description}</p>
+                    <img
+                        className="w-50 block bg-color character-animation"
+                        src={agent.fullPortraitV2}
+                        alt={agent.displayName}
+                    />
                 </div>
             ))}
         </div>
