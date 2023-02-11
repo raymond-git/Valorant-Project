@@ -11,7 +11,6 @@ function Home() {
         fetch("https://valorant-api.com/v1/agents")
             .then((response) => response.json())
             .then((getValorantAgent) => {
-                console.log(getValorantAgent)
                 setAgents(getValorantAgent.data);
             });
     }, []);

@@ -56,3 +56,17 @@ code {
     transform: translateY(0)
   }
 }
+
+.wrap {
+  border: solid 10px white;
+  color: white;
+  filter: brightness(20);
+  /* width: 764px;
+  height: 625px;
+  margin-top: 15%;
+  margin-right: 10%; */
+}
+
+.wrap2 {
+  border: solid 10px white;
+}
