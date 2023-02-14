@@ -21,10 +21,10 @@ function Home() {
             {/* Need unique id so it knows which agent it belongs to the name and images to each other */}
             <Carousel>
                 {agents.map((agent) => (
-                    <Carousel.Item key={agent.uuid}>
+                    <Carousel.Item className="carousel-position" key={agent.uuid}>
                         <Link to={`/${agent.uuid}`}>
                             <Carousel.Caption className="h-100">
-                                <h3 className="mt-8 font-weight: 800 text-5xl text-animation">{agent.displayName}</h3>
+                                <h3 className="mt-8 font-weight: 800 text-5xl text-animation homepage-character-size">{agent.displayName}</h3>
                             </Carousel.Caption>
                             <img
                                 className="mx-auto my-8 w-50 block character-animation"
