@@ -28,23 +28,21 @@ function SelectedAgent() {
                             />
                         </div>
                         <div className="descriptionBorder my-36 p-32">
-                            {/* <div className="abilities"> */}
-
                             <div className="row">
                                 <img id="iconBorder" src={`https://media.valorant-api.com/agents/${uuid}/abilities/ability1/displayicon.png`} alt={agent.abilities} className="box col-md-2 col-sm-3 col-xs-4"></img>
-                                <div className="box2 col-md-10 col-sm-9 col-xs-8">{agent.description}</div>
+                                <div className="box2 col-md-10 col-sm-9 col-xs-8" >{agent.abilities[0].description}</div>
                             </div>
-                            <div className="row">
+                            <div className="row" style={{ marginTop: "6%" }}>
                                 <img id="iconBorder" src={`https://media.valorant-api.com/agents/${uuid}/abilities/ability2/displayicon.png`} alt={agent.abilities} className="box col-md-2 col-sm-3 col-xs-4"></img>
-                                <div className="box4 col-md-10 col-sm-9 col-xs-8">{agent.description}</div>
+                                <div className="box4 col-md-10 col-sm-9 col-xs-8">{agent.abilities[1].description}</div>
                             </div>
-                            <div className="row">
+                            <div className="row" style={{ marginTop: "6%" }}>
                                 <img id="iconBorder" src={`https://media.valorant-api.com/agents/${uuid}/abilities/grenade/displayicon.png`} alt={agent.abilities} className="box col-md-2 col-sm-3 col-xs-4"></img>
-                                <div className="box6 col-md-10 col-sm-9 col-xs-8">{agent.description}</div>
+                                <div className="box6 col-md-10 col-sm-9 col-xs-8">{agent.abilities[2].description}</div>
                             </div>
-                            <div className="row">
+                            <div className="row" style={{ marginTop: "6%" }}>
                                 <img id="iconBorder" src={`https://media.valorant-api.com/agents/${uuid}/abilities/ultimate/displayicon.png`} alt={agent.abilities} className="box col-md-2 col-sm-3 col-xs-4"></img>
-                                <div className="box col-md-10 col-sm-9 col-xs-8">{agent.description}</div>
+                                <div className="box col-md-10 col-sm-9 col-xs-8">{agent.abilities[3].description}</div>
                             </div>
                         </div>
                     </div>

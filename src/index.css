@@ -83,17 +83,30 @@ code {
   filter: brightness(100%);
 }
 
+.box,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6 {
+  text-align: left;
+  margin: 0 auto;
+}
+
+#iconBorder {
+  border: pink solid 1px;
+  object-fit: contain;
+}
+
 @media (max-width: 800px) {
   .cont {
     flex-direction: column;
-    /* margin: 0; */
   }
 
   .imageBorder,
   .descriptionBorder {
     width: 100%;
     margin: 0;
-    /* overflow-y: hidden; */
   }
 
   .homepage-character-size {
@@ -105,12 +118,8 @@ code {
     margin-top: 10px;
   }
 
-  .abilities {
-    border: pink solid 1px;
-    max-width: 200%;
-    margin-top: -80px;
-    margin-right: -104px;
-    margin-left: -104px;
+  .row {
+    margin-bottom: 50px;
   }
 }
 
@@ -123,23 +132,20 @@ code {
   }
 }
 
-
-.abilities {
-  border: pink solid 1px;
-  /* max-width: 200%;
-  margin-top: -126px;
-  margin-right: -104px;
-  margin-left: -104px; */
+@media (max-width: 768px) { /* for small screens, increase margin */
+  .box2,
+  .box4,
+  .box6,
+  .box {
+    margin-top: 20px;
+  }
 }
 
-.box, .box2, .box3, .box4, .box5, .box6 {
-  width: 90%;
-  margin: 37px 0;
-  transform: translateY(calc(-70%));
-  height: 102px;
-  text-align: left;
-}
-
-#iconBorder {
-  border: pink solid 1px;
+@media (max-width: 576px) { /* for extra small screens, increase margin even more */
+  .box2,
+  .box4,
+  .box6,
+  .box {
+    margin-top: 30px;
+  }
 }
