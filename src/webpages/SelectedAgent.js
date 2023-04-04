@@ -45,7 +45,7 @@ function SelectedAgent() {
                                 <img id="iconBorder" src={`https://media.valorant-api.com/agents/${uuid}/abilities/ultimate/displayicon.png`} alt={agent.abilities} className="box col-md-2 col-sm-3 col-xs-4"></img>
                                 <div className="box col-md-10 col-sm-9 col-xs-8" style={{ paddingLeft: '50px' }}><h4>{agent.abilities[3].displayName}</h4>{agent.abilities[3].description}</div>
                             </div>
-                            <Link to={`http://localhost:3000/`} type="button" class="my-button btn btn-primary btn-lg btn-block">Back to Agent</Link>
+                            <Link to={`https://main--legendary-crostata-bdcd7b.netlify.app/`} type="button" class="my-button btn btn-primary btn-lg btn-block">Back to Agent</Link>
                         </div>
                     </div>
                 </div>
